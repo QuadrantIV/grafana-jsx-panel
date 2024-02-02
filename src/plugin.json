@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/grafana/grafana/main/docs/sources/developers/plugins/plugin.schema.json",
-  "id": "foginn-jsx",
+  "id": "foginn-jsx-panel",
   "type": "panel",
   "name": "JSX",
   "info": {
