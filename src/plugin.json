@@ -1,0 +1,25 @@
+{
+  "$schema": "https://raw.githubusercontent.com/grafana/grafana/main/docs/sources/developers/plugins/plugin.schema.json",
+  "id": "foginn-jsx",
+  "type": "panel",
+  "name": "JSX",
+  "info": {
+    "keywords": ["panel"],
+    "description": "Jsx real time render",
+    "author": {
+      "name": "yangling"
+    },
+    "logos": {
+      "small": "img/logo.svg",
+      "large": "img/logo.svg"
+    },
+    "links": [],
+    "screenshots": [],
+    "version": "%VERSION%",
+    "updated": "%TODAY%"
+  },
+  "dependencies": {
+    "grafanaDependency": ">=10.0.3",
+    "plugins": []
+  }
+}
