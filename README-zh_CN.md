@@ -9,7 +9,4 @@
 - 📚 可直接使用 @grafana/ui 组件库
 
 ## Demo
-<video width="100%" height="320" controls>
-  <source src="./static/demo.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+![demo](./static/demo.gif)
