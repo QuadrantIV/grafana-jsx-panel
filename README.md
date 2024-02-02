@@ -1,5 +1,5 @@
 # Grafana Jsx Panel
-A JSX real-time rendering Grafana panel plugin.
+A JSX real-time rendering grafana panel plugin.
 
 [简体中文](./README-zh_CN.md) | English
 

@@ -4,7 +4,7 @@ import React, { useRef } from 'react';
 import { PanelProps } from '@grafana/data';
 import * as GrafanaUI from '@grafana/ui';
 
-const Babel = require('@babel/standalone');
+const Babel = require('@babel/standalone/babel.min.js');
 
 export interface Props extends PanelProps { }
 
