@@ -3,11 +3,12 @@ import * as React from 'react';
 
 import { StandardEditorProps } from '@grafana/data';
 import { CodeEditor as GrafanaCodeEditor } from '@grafana/ui';
+const Babel = require('@babel/standalone/babel.min.js');
 
 import ReactTypes from '../../types/react';
 
 const CodeEditor = (props: StandardEditorProps) => {
-  const { item, onChange } = props;
+  const { onChange } = props;
 
   const onBeforeEditorMount = (monaco: typeof monacoType) => {
     monaco.languages.typescript.typescriptDefaults.setCompilerOptions({
@@ -33,15 +34,23 @@ const CodeEditor = (props: StandardEditorProps) => {
     );
   }
 
+  const onCodeChange = (source: string) => {
+    const compiled = Babel.transform(source, { presets: ['env', 'react'] }).code;
+    onChange({
+      source,
+      compiled
+    });
+  }
+
   return (
     <GrafanaCodeEditor
       height={'33vh'}
-      value={props.value}
-      language={item.settings.language}
+      value={props.value?.source}
+      language={'typescript'}
       showLineNumbers={true}
       onBeforeEditorMount={onBeforeEditorMount}
-      onSave={onChange}
-      onBlur={onChange}
+      onSave={onCodeChange}
+      onBlur={onCodeChange}
       monacoOptions={{
         contextmenu: true,
       }}
