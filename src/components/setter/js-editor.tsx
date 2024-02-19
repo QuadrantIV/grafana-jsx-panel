@@ -3,7 +3,9 @@ import * as React from 'react';
 
 import { StandardEditorProps } from '@grafana/data';
 import { CodeEditor as GrafanaCodeEditor } from '@grafana/ui';
-const Babel = require('@babel/standalone/babel.min.js');
+// @ts-ignore
+const Babel = window.Babel;
+console.log('Jsx panel @babel/standalone', Babel);
 
 import ReactTypes from '../../types/react';
 
