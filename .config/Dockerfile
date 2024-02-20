@@ -13,4 +13,4 @@ ENV GF_DEFAULT_APP_MODE "development"
 
 # Inject livereload script into grafana index.html
 USER root
-RUN sed -i 's/<\/body><\/html>/<script src=\"http:\/\/localhost:35729\/livereload.js\"><\/script><\/body><\/html>/g' /usr/share/grafana/public/views/index.html
+RUN sed -i 's/<\/body><\/html>/<script src=\"http:\/\/localhost:35729\/livereload.js\"><\/script><script src=\"https:\/\/g.alicdn.com\/grafana\/fe-build\/7.23.10\/public\/babel.min.js\"><\/script><\/body><\/html>/g' /usr/share/grafana/public/views/index.html

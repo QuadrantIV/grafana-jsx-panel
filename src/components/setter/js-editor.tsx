@@ -32,6 +32,7 @@ const CodeEditor = (props: StandardEditorProps) => {
     });
 
     monaco.languages.typescript.typescriptDefaults.addExtraLib(
+      // Type definitions for React 16.9
       ReactTypes,
     );
   }
