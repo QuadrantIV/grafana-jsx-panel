@@ -27,6 +27,7 @@ $ npm run build
 
 ```bash
 $ npm install
+
 // 启动插件
 $ npm run dev
 
